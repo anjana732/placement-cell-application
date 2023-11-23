@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#submit-button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}

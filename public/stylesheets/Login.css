@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: url('Assets/bg2.jpg') center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(243, 230, 211, 0.6);
+    width: 80vw; /* 80% of viewport width */
+    max-width: 400px; /* Set a maximum width for responsiveness */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+label, input, button {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+input {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    border: none;
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-bottom: 1.8px solid black;
+    transition: border-color 0.3s ease, background-color 0.3s ease ,transform 0.3s ease;
+}
+
+input:hover {
+    border-color: rgb(253, 107, 253);
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+}
+
+.container h2 {
+    text-align: center;
+    padding: 7px;
+
+}
+
+#login {
+    background-color: black;
+    color: rgb(201, 224, 206);
+    padding: 8px;
+    margin: 20px 10px 20px 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#login:hover {
+    transform: scale(0.9);
+}
+.container a{
+    text-decoration: none;
+  text-align: center;
+}
