@@ -7,3 +7,17 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+/*const { default: mongoose } = require("mongoose");
+
+const mongoos = require('mongoose');
+
+mongoose.connect = ("mongodb://127.0.0.1:27017/placement-cell");
+
+const userschema = mongoos.Schema({
+  name: String,
+  regNo: Number,
+  password: String
+})
+
+module.exports = mongoos.model("Student", schema);*/
