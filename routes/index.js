@@ -10,7 +10,7 @@ const session = require('express-session');
 //const userModel = require('./users')
 
 /* GET home page. */
-mongoose.connect('mongodb://localhost:27017/placement-cell', { useNewUrlParser: true, useUnifiedTopology: true });
+/*mongoose.connect('mongodb://localhost:27017/placement-cell', { useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema = new mongoose.Schema({
   name: String,
@@ -65,7 +65,7 @@ router.post('/StudentLogin', (req, res) => {
   });
 });
 
-
+*/
 router.get('/mid', function(req, res, next) {
   res.render('mid');
 });

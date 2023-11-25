@@ -1,4 +1,4 @@
-/*const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 require('dotenv').config();
 
 const username = process.env.USER_NAME;
@@ -24,7 +24,7 @@ const connectDB = () => {
 }
 
 module.exports = connectDB;
-*/
+
 
 // sudo systemctl start mongod
 //mongodb://localhost:27017
