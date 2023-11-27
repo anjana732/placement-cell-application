@@ -43,21 +43,29 @@ app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-app.post('/StudentRegister', (req, res) => {
+app.post('/StudentRegister', async(req, res) => {
   const { name, regNo, email, password } = req.body;
 
   // Create a new user
   const newUser = new User({ name, regNo, email, password });
 
   // Save the user to the database
-  newUser.save((err) => {
+  /*newUser.save((err) => {
     if (err) {
       console.error(err);
       res.send('Error registering user.');
     } else {
       res.send('User registered successfully.');
     }
-  });
+  });*/
+  try {
+    // Save the user to the database
+    await newUser.save();
+    res.send('User registered successfully.');
+  } catch (err) {
+    console.error(err);
+    res.send('Error registering user.');
+  }
 });
 
 app.get('/StudentLogin', (req, res) => {
