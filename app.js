@@ -61,7 +61,7 @@ app.post('/StudentRegister', async(req, res) => {
   try {
     // Save the user to the database
     await newUser.save();
-    res.send('User registered successfully.');
+    res.render('StudentLogin');//User registered successfully.');
   } catch (err) {
     console.error(err);
     res.send('Error registering user.');
@@ -72,11 +72,24 @@ app.get('/StudentLogin', (req, res) => {
   res.render('StudentLogin');
 });
 
-app.post('/StudentLogin', (req, res) => {
+app.post('/StudentLogin', async(req, res) => {
   const { email, password } = req.body;
 
+  try {
+    // Check if the user exists in the database
+    const user = await User.findOne({ email, password }).exec();
+
+    if (user) {
+      res.send('Login successful.');
+    } else {
+      res.send('Invalid username or password.');
+    }
+  } catch (err) {
+    console.error(err);
+    res.send('Error during login.');
+  }
   // Check if the user exists in the database
-  User.findOne({ email, password }, (err, user) => {
+ /* User.findOne({ email, password }, (err, user) => {
     if (err) {
       console.error(err);
       res.send('Error during login.');
@@ -85,7 +98,7 @@ app.post('/StudentLogin', (req, res) => {
     } else {
       res.send('Invalid username or password.');
     }
-  });
+  });*/
 });
 
 // catch 404 and forward to error handler
