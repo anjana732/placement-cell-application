@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/Dashboard.css">
+  <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
+  <title>Your University</title>
 </head>
 <body>
-    <h1>Admin Dashboard</h1>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="university_logo.png" alt="University Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Job</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Post</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="navbar">
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+    </div>
+    <div class="notification">
+        <a href="#notificaion"><i class="fa-regular fa-bell"></i></a>
+      <!--<span>Notifications</span> -->
+      <!-- Add notification icon or content here -->
+    </div>
+    <div class="profile">
+        <img class="profile-img" src="university_logo.png"  width="35" height="35">
+        <span id="username"><% %></span></span>
+      <!-- Add profile picture or icon here -->
+    </div>
+  </div>
+
+  <!-- Your main content goes here -->
+
+  <script src="script.js"></script>
 </body>
 </html>

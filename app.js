@@ -43,25 +43,17 @@ app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+//Registration and login functionality for Students
+
 app.post('/StudentRegister', async(req, res) => {
   const { name, regNo, email, password } = req.body;
 
   // Create a new user
   const newUser = new User({ name, regNo, email, password });
 
-  // Save the user to the database
-  /*newUser.save((err) => {
-    if (err) {
-      console.error(err);
-      res.send('Error registering user.');
-    } else {
-      res.send('User registered successfully.');
-    }
-  });*/
   try {
-    // Save the user to the database
     await newUser.save();
-    res.render('StudentLogin');//User registered successfully.');
+    res.render('StudentLogin');
   } catch (err) {
     console.error(err);
     res.send('Error registering user.');
@@ -80,7 +72,7 @@ app.post('/StudentLogin', async(req, res) => {
     const user = await User.findOne({ email, password }).exec();
 
     if (user) {
-      res.send('Login successful.');
+      res.render('StudentDashboard');
     } else {
       res.send('Invalid username or password.');
     }
@@ -88,35 +80,65 @@ app.post('/StudentLogin', async(req, res) => {
     console.error(err);
     res.send('Error during login.');
   }
-  // Check if the user exists in the database
- /* User.findOne({ email, password }, (err, user) => {
-    if (err) {
-      console.error(err);
-      res.send('Error during login.');
-    } else if (user) {
-      res.send('Login successful.');
+  
+
+});
+
+// Registration and login functionality for Admin
+
+const AdminSchema = new mongoose.Schema({
+  name: String,
+  staffId: Number,
+  email: String,
+  password: String
+});
+
+const admin = mongoose.model('Admin', AdminSchema);
+
+app.get('/AdminRegister', (req, res) => {
+  res.render('AdminRegister');
+});
+
+app.post('/AdminRegister', async(req, res) => {
+  const { name, staffId, email, password } = req.body;
+
+  // Create a new user
+  const newAdmin = new admin({ name, staffId, email, password });
+
+  try {
+    await newAdmin.save();
+    res.render('AdminLogin');
+  } catch (err) {
+    console.error(err);
+    res.send('Error registering user.');
+  }
+});
+
+app.get('/AdminLogin', (req, res) => {
+  res.render('AdminLogin');
+});
+
+app.post('/AdminLogin', async(req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // Check if the user exists in the database
+    const newadmin = await admin.findOne({ email, password }).exec();
+
+    if (newadmin) {
+      res.render('AdminDashBoard');
     } else {
       res.send('Invalid username or password.');
     }
-  });*/
+  } catch (err) {
+    console.error(err);
+    res.send('Error during login.');
+  }
+  
+
 });
 
-// catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   next(createError(404));
-// });
-
-// // error handler
-// app.use(function(err, req, res, next) {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });*/
-
+// Connecting on port with server
 const PORT = 4500;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
