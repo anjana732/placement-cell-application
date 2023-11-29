@@ -35,11 +35,9 @@
             <button type="submit">Post Job</button>
           </form>
         </div>
-      </div>
-    
+      </div>    
     </nav>
   </div>
-
   <div class="navbar">
     <div class="search-box">
      <input type="text" placeholder="Search...">
@@ -54,7 +52,22 @@
     </div>
   </div>
   </div>
-
+  <!--Main Content-->
+ <!-- <h1>Recent Posts</h1>
+  <div>
+    <%j obs.forEach(job => { %>
+      <div class="job-card">
+        <h2><%= job.companyName %></h2>
+        <p><strong>Location:</strong> <%= job.location %></p>
+        <p><strong>Job Role:</strong> <%= job.jobRole %></p>
+        <p><strong>Salary:</strong> <%= job.salary %></p>
+        <p><strong>Job Description:</strong> <%= job.jobDesc %></p>
+        <p><strong>Apply Link:</strong> <a href="<%= job.applyLink %>" target="_blank"><%= job.applyLink %></a></p>
+        <p><strong>Last Date:</strong> <%= job.lastDate.toDateString() %></p>
+      </div>
+    <% }); %>
+  </div>
+  -->
   <script src="/javascripts/jobPostPopUp.js"></script>
 
 </body>

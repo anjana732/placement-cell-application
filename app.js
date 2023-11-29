@@ -148,9 +148,7 @@ const postJob = mongoose.model('PostedJob', {
   lastDate: Date
 });
 
-app.get('/AdminDashBoard', (req, res) => {
-  res.render('AdminDashBoard');
-});
+
 app.post('/AdminDashBoard', async (req, res) => {
   try {
     const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate} = req.body;
@@ -162,6 +160,36 @@ app.post('/AdminDashBoard', async (req, res) => {
     res.status(500).send('Internal Server Error');
   }
 });
+//getting data from database
+const Job = mongoose.model('Job', {
+  companyName: String,
+  location: String,
+  jobRole: String,
+  salary: Number,
+  eligibility: String,
+  jobDesc: String,
+  applyLink: String,
+  lastDate: Date
+});
+app.get('/AdminDashBoard', async(req, res) => {
+  /*res.render('AdminDashBoard');*/
+  try {
+    const jobs = await Job.find();
+    res.render('AdminDashBoard', { jobs });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+/*app.get('/jobs', async (req, res) => {
+  try {
+    const jobs = await Job.find();
+    res.render('jobs', { jobs });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});*/
 
 // Connecting on port with server
 const PORT = 4500;
