@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
   <title>Your University</title>
 </head>
+
 <body>
   <div class="sidebar">
     <div class="logo">
@@ -22,8 +24,9 @@
       </ul>
       <div class="popup" id="popupForm">
         <div class="popup-content">
-          <span class="close" id="closePopup"><i class="fa-solid fa-circle-xmark"></i></span><!--&times;-->
-          <form action="/AdminDashBoard" method="post">
+          <span class="close" id="closePopup"><i class="fa-solid fa-circle-xmark"></i></span>
+          <!--&times;-->
+          <form action="/admin/AdminDashBoard" method="post">
             <input type="text" id="company-name" name="companyName" required placeholder="Comapany Name">
             <input type="text" id="location" name="location" required placeholder="Location">
             <input type="text" id="job-role" name="jobRole" required placeholder="Job Role">
@@ -35,40 +38,37 @@
             <button type="submit">Post Job</button>
           </form>
         </div>
-      </div>    
+      </div>
     </nav>
   </div>
   <div class="navbar">
     <div class="search-box">
-     <input type="text" placeholder="Search...">
+      <input type="text" placeholder="Search...">
     </div>
     <div class="right-item">
-    <div class="notification">
+      <div class="notification">
         <a href="#notificaion"><i class="fa-regular fa-bell fa-2x"></i></a>
-    
+
+      </div>
+      <div class="profile">
+        <img class="profile-img" src="university_logo.png" width="35" height="35">
+      </div>
     </div>
-    <div class="profile">
-        <img class="profile-img" src="university_logo.png"  width="35" height="35">
-    </div>
-  </div>
   </div>
   <!--Main Content-->
- <!-- <h1>Recent Posts</h1>
+  <h1>Recent Posts</h1>
   <div>
-    <%j obs.forEach(job => { %>
-      <div class="job-card">
-        <h2><%= job.companyName %></h2>
-        <p><strong>Location:</strong> <%= job.location %></p>
-        <p><strong>Job Role:</strong> <%= job.jobRole %></p>
-        <p><strong>Salary:</strong> <%= job.salary %></p>
-        <p><strong>Job Description:</strong> <%= job.jobDesc %></p>
-        <p><strong>Apply Link:</strong> <a href="<%= job.applyLink %>" target="_blank"><%= job.applyLink %></a></p>
-        <p><strong>Last Date:</strong> <%= job.lastDate.toDateString() %></p>
-      </div>
+    <% if (Array.isArray(jobs) && jobs.length > 0) { %>
+    <% jobs.forEach(job => { %>
+    <!-- Your job card HTML here -->
     <% }); %>
+    <% } else { %>
+    <p>No jobs available</p>
+    <% } %>
   </div>
-  -->
+
   <script src="/javascripts/jobPostPopUp.js"></script>
 
 </body>
+
 </html>

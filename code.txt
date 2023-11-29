@@ -1,0 +1,32 @@
+ <!--Main Content-->
+ <!-- <h1>Recent Posts</h1>
+  <div>
+    <%j obs.forEach(job => { %>
+      <div class="job-card">
+        <h2><%= job.companyName %></h2>
+        <p><strong>Location:</strong> <%= job.location %></p>
+        <p><strong>Job Role:</strong> <%= job.jobRole %></p>
+        <p><strong>Salary:</strong> <%= job.salary %></p>
+        <p><strong>Job Description:</strong> <%= job.jobDesc %></p>
+        <p><strong>Apply Link:</strong> <a href="<%= job.applyLink %>" target="_blank"><%= job.applyLink %></a></p>
+        <p><strong>Last Date:</strong> <%= job.lastDate.toDateString() %></p>
+      </div>
+    <% }); %>
+  </div>
+  -->
+
+  /*app.get('/jobs', async (req, res) => {
+  try {
+    const jobs = await Job.find();
+    res.render('jobs', { jobs });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});*/
+
+// Connecting on port with server
+
+
+
+
