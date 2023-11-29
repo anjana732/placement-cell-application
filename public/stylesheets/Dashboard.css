@@ -1,64 +1,83 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    background-color: #111;
-    padding-top: 20px;
-  }
-  
-  .sidebar img {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar nav a {
-    display: block;
-    padding: 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    border-bottom: 1px solid #444;
-  }
-  
-  .sidebar nav a:hover {
-    background-color: #555;
-  }
-  
-  .navbar {
-    padding: 15px;
-    margin-left: 250px;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .search-box input {
-    padding: 8px;
-    width: 200px;
-  }
-  
-  .notification,
-  .profile {
-    display: flex;
-    align-items: center;
-  }
-  
-  .profile {
-    margin-right: 20px;
-  }
-  
-  .profile span {
-    margin-left: 10px;
-  }
-  
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: #111;
+  padding-top: 20px;
+}
+
+.sidebar img {
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+}
+
+.sidebar nav a:hover {
+  background-color: #555;
+}
+
+.navbar {
+  padding: 15px;
+  margin-left: 250px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content:space-between;
+}
+
+.search-box input {
+  padding: 8px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+}
+
+.notification{
+  display: flex;
+  float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.profile {
+  display: flex;
+
+}
+.fa-regular{
+  color: white;
+}
+.profile {
+  margin-right: 20px;
+
+}
+.profile-img{
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.profile span {
+  margin-left: 10px;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+.fa-solid{
+  margin-right: 4px;
+}                                 
