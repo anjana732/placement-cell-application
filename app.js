@@ -133,9 +133,34 @@ app.post('/AdminLogin', async(req, res) => {
   } catch (err) {
     console.error(err);
     res.send('Error during login.');
-  }
-  
+  }  
+});
 
+//posted job
+const postJob = mongoose.model('PostedJob', {
+  companyName: String,
+  location: String,
+  jobRole: String,
+  salary: Number,
+  eligibility: String,
+  jobDesc: String,
+  applyLink: String,
+  lastDate: Date
+});
+
+app.get('/AdminDashBoard', (req, res) => {
+  res.render('AdminDashBoard');
+});
+app.post('/AdminDashBoard', async (req, res) => {
+  try {
+    const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate} = req.body;
+    const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate });
+    await PostJob.save();
+    res.redirect('/AdminDashBoard');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 // Connecting on port with server
