@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const postJob = mongoose.model('PostedJob', {
-    companyName: String,
+const postJobSchema = new mongoose.Schema({
+  companyName: String,
     location: String,
     jobRole: String,
     salary: Number,
@@ -11,4 +11,7 @@ const postJob = mongoose.model('PostedJob', {
     lastDate: Date
   });
 
-  module.exports = postJob;
+//const admin = mongoose.model('Admin', AdminSchema);
+const postJob = mongoose.model('jobs', postJobSchema);
+
+module.exports = postJob;

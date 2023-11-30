@@ -45,12 +45,27 @@ router.get('/AdminRegister', (req, res) => {
     }  
   });
   
+ /* router.post('/AdminDashBoard', async (req, res) => {
+    try {
+      const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate} = req.body;
+      const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate });
+      console.log('ravi');
+      await jobs.create();
+      console.log('ravi1');
+      res.redirect('/admin/AdminDashBoard');
+      console.log('ravi2');
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+  */
   router.post('/AdminDashBoard', async (req, res) => {
     try {
-      const { companyName, location, jobRole, salary, eligibility, jobDesc, routerlyLink, lastDate} = req.body;
-      const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, routerlyLink, lastDate });
-      await PostJob.save();
-      res.redirect('/AdminDashBoard');
+      const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate } = req.body;
+      const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate });
+      await PostJob.save(); // Fix here: Change 'jobs' to 'PostJob'
+      res.redirect('/admin/AdminDashBoard');
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');
@@ -64,6 +79,20 @@ router.get('/AdminRegister', (req, res) => {
     } catch (exp) {
       console.log("catch:", exp);
       res.status(500).json({"message": "An error occurred", "error": exp});
+    }
+  });
+  
+  //getting student details
+  router.get('/student-details', async (req, res) => {
+    try {
+      // Fetch all student details from the database
+      const students = await Student.find();
+  
+      // Render the student details page
+      res.render('student-details', { students });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
     }
   });
   

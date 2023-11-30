@@ -32,7 +32,6 @@ app.get('/mid', function(req, res, next) {
 connectDB();
 
 const PORT = 4500;
-
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
