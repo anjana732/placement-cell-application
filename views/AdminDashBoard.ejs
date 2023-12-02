@@ -32,7 +32,7 @@
             <input type="text" id="location" name="location" required placeholder="Location">
             <input type="text" id="job-role" name="jobRole" required placeholder="Job Role">
             <input type="text" id="salary" name="salary" required placeholder="Salary">
-            <input type="text" id="eligiblity" name="eligiblity" required placeholder="Eligiblity">
+            <input type="text" id="eligiblity" name="eligibility" required placeholder="Eligiblity">
             <input type="text" id="job-description" name="jobDesc" required placeholder="Job Description">
             <input type="text" id="apply-link" name="applyLink" required placeholder="Apply Link">
             <input type="date" id="date" name="lastDate" required>
@@ -60,10 +60,19 @@
   <h1>Recent Posts</h1>
   <div>
     <% if (Array.isArray(jobs) && jobs.length > 0) { %>
-    <% jobs.forEach(job => { %>
-    <% }); %>
+      <% jobs.forEach(job => { %>
+        <div class="job-post">
+          <h2><%= job.companyName %></h2>
+          <p>Location: <%= job.location %></p>
+          <p>Job Role: <%= job.jobRole %></p>
+          <p>Salary: $<%= job.salary %></p>
+          <p>Description: <%= job.jobDesc %></p>
+          <p>Apply Link: <a href="<%= job.applyLink %>" target="_blank">Apply Now</a></p>
+          <p>Last Date: <%= job.lastDate.toISOString().split('T')[0] %></p>
+        </div>
+      <% }); %>
     <% } else { %>
-    <p>No jobs available</p>
+      <p>No jobs available</p>
     <% } %>
   </div>
 

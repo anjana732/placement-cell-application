@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const postJob = require("../models/jobSchema");
-const admin = require('../models/adminSchema')
+const admin = require('../models/adminSchema');
+const mongoose = require('mongoose');
 
 router.get('/AdminRegister', (req, res) => {
     res.render('AdminRegister');
@@ -61,7 +62,8 @@ router.get('/AdminRegister', (req, res) => {
   });
   */
   router.post('/AdminDashBoard', async (req, res) => {
-    try {
+   
+     try {
       const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate } = req.body;
       const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate });
       await PostJob.save(); // Fix here: Change 'jobs' to 'PostJob'
@@ -73,7 +75,10 @@ router.get('/AdminRegister', (req, res) => {
   });
   
   router.get('/AdminDashBoard', async (req, res) => {
-    try {
+   /* postJob.find()
+    .then(postedjobs => res.json(postedjobs))
+    .catch(err => res.json(err))*/
+     try {
       const jobs = await postJob.find().exec();
       res.render('AdminDashBoard', { jobs });
     } catch (exp) {
