@@ -41,4 +41,9 @@ router.post('/StudentRegister', async(req, res) => {
     }
   });
 
+  router.get('/StudentProfile', (req, res) => {
+    res.render('StudentProfile');
+  });
+  
+
 module.exports = router;
