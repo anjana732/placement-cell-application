@@ -5,201 +5,193 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/StudentProfile.css">
-  <title>Editable Input Field</title>
+  <link rel="stylesheet" href="/stylesheets/Dashboard.css">
+  
+
+  <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
+  <title>Student Profile</title>
 </head>
 
 <body>
+  <div class="sidebar">
+    <div class="logo">
+      <img src="/images/logoPU.jpg" alt="University Logo" width="50" height="50">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-gauge-simple-high"></i>Dashboard</a></li>
+        <li><a href="#"><i class="fa-solid fa-suitcase"></i>Job</a></li>
+        <li><a href="/student/StudentProfile"><i class="fa-solid fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fa-solid fa-regular fa-file"></i>Resume Building</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="upperDiv">
-    <img src="" alt="Display picture">
-    <h3>Username</h3>
+  <!--  <h3>Anjana Kumari</h3> -->
+    <img src="/images/Anjana.jpg" alt="Display picture" width="120" height="150">
+    
   </div>
   <div class="parentContainer">
-  <div class="container">
-    <label for="name">Name</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <hr>
-  <div class="container">
-    <label for="gender">Gender</label>
-    <input type="text" id="inputGender" disabled>
-    <button class="editBtn" id="editGenderBtn" onclick="enableGenderEdit()">Edit</button>
-    <button id="saveGenderBtn" onclick="saveGenderChanges()">Save</button>
-    <button id="cancelGenderBtn" onclick="cancelGenderEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="location">Location</label>
-    <input type="text" id="location" disabled>
-    <button class="editBtn" id="editLocation" onclick="enableLocationEdit()">Edit</button>
-    <button id="savelocation" onclick="saveLocationChanges()">Save</button>
-    <button id="cancellocation" onclick="cancelLocationEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="birthday">Birthday</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="summary">Summary</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="website">Website</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="github">Github</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="linkedin">LinedIn</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="twitter">Twitter</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <h3>Expierences</h3>
-  <div class="container">
-    <label for="work">Work</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="education">Education</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="skills">Skills</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <h3>Academic Details</h3>
-  <div class="container">
-    <label for="course">Course</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-  <div class="container">
-    <label for="1stSemCGPA">1st Semester CGPA</label>
-    <input type="text" id="editableInput" disabled>
-    <button class="editBtn"  id="editBtn" onclick="enableEdit()">Edit</button>
-    <button id="saveBtn" onclick="saveChanges()">Save</button>
-    <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-  </div>
-</div>
- <!-- <div class="upperDiv">
-    <img src="" alt="Display picture">
-    <h3>Username</h3>
-  </div>
-  <div class="container">
-    <div class="inputContainer">
-      <label>Name</label>
-      <input type="text" id="editableInput" disabled>
-      <button  id="editBtn" onclick="enableEdit()">Edit</button>
-      <button  id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-    </div>
-   <div class="inputContainer">
-      <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+    <h3>Basic Information</h3>
+    <div class="container">
+      <label for="name">Name</label>
+      <input type="text" id="editableInput"  placeholder="Your Name" disabled>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
-      <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+    <div class="horizontal">
+      <hr>
     </div>
-    <div class="inputContainer">
-      <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="function enableGenderEdit() {
-  toggleEditElements("inputGender", "editGenderBtn", "saveGenderBtn", "cancelGenderBtn");
-}
 
-function saveGenderChanges() {
-  toggleEditElements("inputGender", "editGenderBtn", "saveGenderBtn", "cancelGenderBtn");
-}
-
-function cancelGenderEdit() {
-  toggleEditElements("inputGender", "editGenderBtn", "saveGenderBtn", "cancelGenderBtn");
-}cancelBtn" onclick="cancelEdit()">Cancel</button>
+    <div class="container">
+      <label for="gender">Gender</label>
+     <!-- <input type="text" id="inputGender"  placeholder="Your Name" disabled> -->
+      
+    </div> <select id="page-select">
+      <option value="Male">Select...</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Others">Other</option>
+  </select>
+  <button class="editBtn" id="editGenderBtn" onclick="enableGenderEdit()">Edit</button>
+      <button id="saveGenderBtn" onclick="saveGenderChanges()">Save</button>
+      <button id="cancelGenderBtn" onclick="cancelGenderEdit()">Cancel</button>
+    <div class="horizontal">
+      <hr>
     </div>
-    <div class="inputContainer">
+    <div class="container">
+      <label for="location">Location</label>
+    <!-- <input type="text" id="location" disabled> --> 
+    <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+      <option selected>Select Country</option>
+  </select>
+  <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+      <option selected>Select State</option>
+  </select>
+  <select class="form-select city" aria-label="Default select example">
+      <option selected>Select City</option>
+  </select>
+      <button class="editBtn" id="editLocation" onclick="enableLocationEdit()">Edit</button>
+      <button id="savelocation" onclick="saveLocationChanges()">Save</button>
+      <button id="cancellocation" onclick="cancelLocationEdit()">Cancel</button>
+    </div>
+     
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="birthday">Birthday</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="summary">Summary</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="website">Website</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="github">Github</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="linkedin">LinedIn</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="twitter">Twitter</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-    <div class="inputContainer">
+    <div class="horizontal">
+      <hr>
+    </div>
+    <h3>Expierences</h3>
+    <div class="container">
+      <label for="work">Work</label>
       <input type="text" id="editableInput" disabled>
-      <button id="editBtn" onclick="enableEdit()">Edit</button>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
-  </div> --> 
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="education">Education</label>
+      <input type="text" id="editableInput" disabled>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
+      <button id="saveBtn" onclick="saveChanges()">Save</button>
+      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+    </div>
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="skills">Skills</label>
+      <input type="text" id="editableInput" disabled>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
+      <button id="saveBtn" onclick="saveChanges()">Save</button>
+      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+    </div>
+    <div class="horizontal">
+      <hr>
+    </div>
+    <h3>Academic Details</h3>
+    <div class="container">
+      <label for="course">Course</label>
+      <input type="text" id="editableInput" disabled>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
+      <button id="saveBtn" onclick="saveChanges()">Save</button>
+      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+    </div>
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="1stSemCGPA">1st Semester CGPA</label>
+      <input type="text" id="editableInput" disabled>
+      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
+      <button id="saveBtn" onclick="saveChanges()">Save</button>
+      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+    </div>
+  </div>
   <script src="/javascripts/StudentProfile.js"></script>
+  <script src="/javascripts/location.js"></script>
 
 </body>
 
