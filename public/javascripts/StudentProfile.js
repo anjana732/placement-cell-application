@@ -102,7 +102,7 @@ function cancelLocationEdit() {
   saveLocation.style.display = "none";
   cancelLocation.style.display = "none";
 }*/
-
+//Toggle function
 function toggleEditElements(inputId, editBtnId, saveBtnId, cancelBtnId) {
   var inputField = document.getElementById(inputId);
   var editBtn = document.getElementById(editBtnId);
@@ -115,6 +115,7 @@ function toggleEditElements(inputId, editBtnId, saveBtnId, cancelBtnId) {
   cancelBtn.style.display = inputField.disabled ? "none" : "inline-block";
 }
 
+//Functions for name field
 function enableEdit() {
   toggleEditElements("editableInput", "editBtn", "saveBtn", "cancelBtn");
 }
@@ -127,6 +128,7 @@ function cancelEdit() {
   toggleEditElements("editableInput", "editBtn", "saveBtn", "cancelBtn");
 }
 
+//Functions for Gender Field
 function enableGenderEdit() {
   toggleEditElements("inputGender", "editGenderBtn", "saveGenderBtn", "cancelGenderBtn");
 }
@@ -137,4 +139,18 @@ function saveGenderChanges() {
 
 function cancelGenderEdit() {
   toggleEditElements("inputGender", "editGenderBtn", "saveGenderBtn", "cancelGenderBtn");
+}
+
+//Functions for location field
+
+function enableLocationEdit() {
+  toggleEditElements("location", "editLocation", "saveLocation", "cancelLocation");
+}
+
+function saveLocationChanges() {
+  toggleEditElements("location", "editLocation", "saveLocation", "cancelLocation");
+}
+
+function cancelLocationEdit() {
+  toggleEditElements("location", "editLocation", "saveLocation", "cancelLocation");
 }
