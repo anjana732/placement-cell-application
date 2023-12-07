@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/StudentProfile.css">
   <link rel="stylesheet" href="/stylesheets/Dashboard.css">
-  
+
 
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
   <title>Student Profile</title>
@@ -27,15 +27,15 @@
     </nav>
   </div>
   <div class="upperDiv">
-  <!--  <h3>Anjana Kumari</h3> -->
+    <!--  <h3>Anjana Kumari</h3> -->
     <img src="/images/Anjana.jpg" alt="Display picture" width="120" height="150">
-    
+
   </div>
   <div class="parentContainer">
-    <h3>Basic Information</h3>
+    <h3>Basic Information</h3></div>
     <div class="container">
       <label for="name">Name</label>
-      <input type="text" id="editableInput"  placeholder="Your Name" disabled>
+      <input type="text" id="editableInput" placeholder="Your Name" disabled>
       <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
       <button id="saveBtn" onclick="saveChanges()">Save</button>
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
@@ -46,40 +46,40 @@
 
     <div class="container">
       <label for="gender">Gender</label>
-     <!-- <input type="text" id="inputGender"  placeholder="Your Name" disabled> -->
-      
-    </div> <select id="page-select">
-      <option value="Male">Select...</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-      <option value="Others">Other</option>
-  </select>
-  <button class="editBtn" id="editGenderBtn" onclick="enableGenderEdit()">Edit</button>
+      <select id="inputGender" placeholder="Your Name" disabled">
+        <option value="Male">Select...</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Other</option>
+      </select>
+      <button class="editBtn" id="editGenderBtn" onclick="enableGenderEdit()">Edit</button>
       <button id="saveGenderBtn" onclick="saveGenderChanges()">Save</button>
       <button id="cancelGenderBtn" onclick="cancelGenderEdit()">Cancel</button>
+    </div>
     <div class="horizontal">
       <hr>
     </div>
+    <!--...........................Location ............................-->
     <div class="container">
       <label for="location">Location</label>
-    <!-- <input type="text" id="location" disabled> --> 
-    <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
-      <option selected>Select Country</option>
-  </select>
-  <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
-      <option selected>Select State</option>
-  </select>
-  <select class="form-select city" aria-label="Default select example">
-      <option selected>Select City</option>
-  </select>
+      <!-- <input type="text" id="location" disabled> -->
+      <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+        <option selected>Select Country</option>
+      </select>
+      <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+        <option selected>Select State</option>
+      </select>
+      <select class="form-select city" aria-label="Default select example">
+        <option selected>Select City</option>
+      </select>
       <button class="editBtn" id="editLocation" onclick="enableLocationEdit()">Edit</button>
       <button id="savelocation" onclick="saveLocationChanges()">Save</button>
       <button id="cancellocation" onclick="cancelLocationEdit()">Cancel</button>
     </div>
-     
     <div class="horizontal">
       <hr>
     </div>
+    <!--..............................Birthday...................................-->
     <div class="container">
       <label for="birthday">Birthday</label>
       <input type="text" id="editableInput" disabled>
@@ -90,22 +90,26 @@
     <div class="horizontal">
       <hr>
     </div>
+    <!--..................................Summary...........................................-->
     <div class="container">
       <label for="summary">Summary</label>
-      <input type="text" id="editableInput" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+      <textarea id="editableSummary" placeholder="Tell us about yourself (interests, experience, etc.)" disabled></textarea>
+     <!-- <input type="text" id="editableSummary" placeholder="Tell us about yourself (interests, experience, etc.)" disabled> -->
+      <button class="editBtn" id="editSummaryBtn" onclick="enableSummaryEdit()">Edit</button>
+      <button id="saveSummaryBtn" onclick="saveSummaryChanges()">Save</button>
+      <button id="cancelSummaryBtn" onclick="cancelSummaryEdit()">Cancel</button>
     </div>
     <div class="horizontal">
       <hr>
     </div>
+    <!--..........................website...........................................-->
     <div class="container">
       <label for="website">Website</label>
-      <input type="text" id="editableInput" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+     <!-- <textarea name="website" id="editableWebsite" disabled></textarea> -->
+      <input type="text" id="editableWebsite" disabled>
+      <button class="editBtn" id="editWebsiteBtn" onclick="enableWebsiteEdit()">Edit</button>
+      <button id="saveWebsiteBtn" onclick="saveWebsiteChanges()">Save</button>
+      <button id="cancelWebsiteBtn" onclick="cancelWebsiteEdit()">Cancel</button>
     </div>
     <div class="horizontal">
       <hr>

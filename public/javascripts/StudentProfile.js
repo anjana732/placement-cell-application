@@ -154,3 +154,31 @@ function saveLocationChanges() {
 function cancelLocationEdit() {
   toggleEditElements("location", "editLocation", "saveLocation", "cancelLocation");
 }
+
+//Functions for Summary Field
+
+function enableSummaryEdit() {
+  toggleEditElements("editableSummary", "editSummaryBtn", "saveSummaryBtn", "cancelSummaryBtn");
+}
+
+function saveSummaryChanges() {
+  toggleEditElements("editableSummary", "editSummaryBtn", "saveSummaryBtn", "cancelSummaryBtn");
+}
+
+function cancelSummaryEdit() {
+  toggleEditElements("editableSummary", "editSummaryBtn", "saveSummaryBtn", "cancelSummaryBtn");
+}
+
+//Functions for website
+
+function enableWebsiteEdit() {
+  toggleEditElements("editableWebsite", "editWebsiteBtn", "saveWebsiteBtn", "cancelWebsiteBtn");
+}
+
+function saveWebsiteChanges() {
+  toggleEditElements("editableWebsite", "editSummaryBtn", "saveSummaryBtn", "cancelWebsiteBtn");
+}
+
+function cancelWebsiteEdit() {
+  toggleEditElements("editableWebsite", "editWebsiteBtn", "saveWebsiteBtn", "cancelWebsiteBtn");
+}

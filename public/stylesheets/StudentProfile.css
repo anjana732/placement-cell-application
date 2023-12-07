@@ -10,80 +10,105 @@
    /* height: 100vh;
     margin: 0;
   }*/
-  
-  .container {
-    text-align: center;
-  }
-  
-  input {
-    padding: 7px;
-    /*color: aqua;*/
-    margin-right: 5px;
-    border-bottom: 1px solid black;
-    border-radius: 5px 5px 0px 0px;
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-   /* border: none;*/
-    outline: none;
-    margin: 10px;
-    width: 40%;
-  }
-  label{
-    float: left;
-    margin-left: 100px;
-    margin-top: 20px;
-  }
-  .editBtn{
-    background-color: rgb(26, 25, 25);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px 10px 20px;
-    margin: 10px 10px 10px 100px;
-    border: none;
-   /* float: right;*/
-  }
-  button {
-    padding: 8px;
-    cursor: pointer;
-  }
-  .horizontal{
-    width: 90%;
-    /*display: flex;
+
+.container {
+  text-align: center;
+}
+
+input {
+  padding: 7px;
+  /*color: aqua;*/
+  margin-right: 5px;
+  border-bottom: 1px solid black;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  /* border: none;*/
+  outline: none;
+  margin: 10px;
+  width: 40%;
+}
+
+#inputGender {
+  padding: 7px;
+  margin-right: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  /* border: none;*/
+  outline: none;
+  margin: 10px;
+  width: 40%;
+}
+
+label {
+  float: left;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.editBtn {
+  background-color: rgb(26, 25, 25);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 10px 10px 100px;
+  border: none;
+  /* float: right;*/
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.horizontal {
+  width: 90%;
+  /*display: flex;
     justify-content: center;
     align-items: center;*/
-    text-align: center;
-    margin: auto;
-  }
-  
-  #saveBtn,#saveGenderBtn, #savelocation{
-    display: none;
-    background-color: rgb(133, 178, 236);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 18px 10px 18px;
-    margin: 10px;
-  }
-  #cancelBtn,  #cancelGenderBtn, #cancellocation{
-    display: none;
-    background-color: rgb(243, 111, 111);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 18px 10px 18px;
-    margin: 10px;
-    color: white;
-  }
-.upperDiv{
+  text-align: center;
+  margin: auto;
+}
+
+#saveBtn,
+#saveGenderBtn,
+#savelocation,
+#saveSummaryBtn {
+  display: none;
+  background-color: rgb(133, 178, 236);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 18px 10px 18px;
+  margin: 10px;
+}
+
+#cancelBtn,
+#cancelGenderBtn,
+#cancellocation,
+#cancelSummaryBtn {
+  display: none;
+  background-color: rgb(243, 111, 111);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 18px 10px 18px;
+  margin: 10px;
+  color: white;
+}
+
+.upperDiv {
   width: 82%;
   height: 48vh;
   float: right;
-  background-color:  #555;
+  background-color: #555;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}  
+}
+
 .upperDiv img {
   padding: auto;
   margin: auto;
@@ -93,12 +118,13 @@
   padding: auto;
   cursor: pointer;
 }
+
 /*.upperDiv h3{
   margin: 0;
  /* padding: -20px;
   color: white;
 }*/
-.parentContainer{
+.parentContainer {
   width: 65%;
   box-shadow: 0 0 10px rgba(94, 90, 90, 0.1);
   background-color: rgb(238, 242, 245);
@@ -108,9 +134,26 @@
   float: right;
   display: flex;
   flex-direction: column;
+
 }
-.parentContainer h3{
+
+.parentContainer h3 {
   text-align: center;
   padding: 10px;
   margin: 10px;
+}
+
+textarea {
+  padding: 7px;
+  /*color: aqua;*/
+  margin-right: 5px;
+  border-bottom: 1px solid black;
+  border-radius: 5px 5px 0px 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  /* border: none;*/
+  outline: none;
+  margin: 10px;
+  width: 40%;
 }
