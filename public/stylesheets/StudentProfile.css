@@ -1,10 +1,14 @@
 body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+   /* height: 100vh;
+    margin: 0;*/
   }
   
   .container {
@@ -24,4 +28,13 @@ body {
   #saveBtn, #cancelBtn {
     display: none;
   }
-  
+.upperDiv{
+  width: 100%;
+  height: 60%;
+  background-color:  #555;
+}  
+.parentContainer{
+  width: 75%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(238, 242, 245);
+}
