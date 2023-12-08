@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/StudentProfile.css">
-  <link rel="stylesheet" href="/stylesheets/Dashboard.css">
+<!--  <link rel="stylesheet" href="/stylesheets/Dashboard.css"> -->
 
 
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
@@ -26,13 +26,14 @@
       </ul>
     </nav>
   </div>
+  <div class="rightdiv">
   <div class="upperDiv">
     <!--  <h3>Anjana Kumari</h3> -->
     <img src="/images/Anjana.jpg" alt="Display picture" width="120" height="150">
 
   </div>
   <div class="parentContainer">
-    <h3>Basic Information</h3></div>
+    <h3>Basic Information</h3>
     <div class="container">
       <label for="name">Name</label>
       <input type="text" id="editableInput" placeholder="Your Name" disabled>
@@ -41,13 +42,15 @@
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
     <div class="horizontal">
+      <br>
       <hr>
+      <br>
     </div>
 
     <div class="container">
       <label for="gender">Gender</label>
-      <select id="inputGender" placeholder="Your Name" disabled">
-        <option value="Male">Select...</option>
+      <select id="inputGender" disabled">
+        <option value="select">Select...</option>
         <option value="Male">Male</option>
         <option value="Female">Female</option>
         <option value="Others">Other</option>
@@ -57,19 +60,21 @@
       <button id="cancelGenderBtn" onclick="cancelGenderEdit()">Cancel</button>
     </div>
     <div class="horizontal">
+      <br>
       <hr>
+      <br>
     </div>
     <!--...........................Location ............................-->
     <div class="container">
       <label for="location">Location</label>
       <!-- <input type="text" id="location" disabled> -->
-      <select class="form-select country" aria-label="Default select example" onchange="loadStates()">
+      <select class="locationSelect" class="form-select country" aria-label="Default select example" onchange="loadStates()">
         <option selected>Select Country</option>
       </select>
-      <select class="form-select state" aria-label="Default select example" onchange="loadCities()">
+      <select class="locationSelect"  class="form-select state" aria-label="Default select example" onchange="loadCities()">
         <option selected>Select State</option>
       </select>
-      <select class="form-select city" aria-label="Default select example">
+      <select class="locationSelect"  class="form-select city" aria-label="Default select example">
         <option selected>Select City</option>
       </select>
       <button class="editBtn" id="editLocation" onclick="enableLocationEdit()">Edit</button>
@@ -77,7 +82,9 @@
       <button id="cancellocation" onclick="cancelLocationEdit()">Cancel</button>
     </div>
     <div class="horizontal">
+      <br>
       <hr>
+      <br>
     </div>
     <!--..............................Birthday...................................-->
     <div class="container">
@@ -88,7 +95,9 @@
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
     <div class="horizontal">
+      <br>
       <hr>
+      <br>
     </div>
     <!--..................................Summary...........................................-->
     <div class="container">
@@ -127,7 +136,7 @@
     </div>
     <!--...........................LinkedIn...............................................-->
     <div class="container">
-      <label for="linkedin">LinedIn</label>
+      <label for="linkedin">LinkedIn</label>
       <input type="text" id="editableLinkedIn" placeholder="Your LinkedIn Link" disabled>
       <button class="editBtn" id="editLinkedInBtn" onclick="enableLinkedInEdit()">Edit</button>
       <button id="saveLinkedInBtn" onclick="saveLinkedInChanges()">Save</button>
@@ -162,10 +171,10 @@
     <!--....................................Education........................................-->
     <div class="container">
       <label for="education">Education</label>
-      <input type="text" id="editableInput" placeholder="Add your education" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+      <input type="text" id="editableEducation" placeholder="Add your education" disabled>
+      <button class="editBtn" id="editEducationBtn" onclick="enableEducationEdit()">Edit</button>
+      <button id="saveEducationBtn" onclick="saveEducationChanges()">Save</button>
+      <button id="cancelEducationBtn" onclick="cancelEducationEdit()">Cancel</button>
     </div>
     <div class="horizontal">
       <hr>
@@ -173,10 +182,10 @@
     <!--.........................................Skills...........................................-->
     <div class="container">
       <label for="skills">Skills</label>
-      <input type="text" id="editableInput" placeholder="Add your skills" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
+      <input type="text" id="editableSkills" placeholder="Add your skills" disabled>
+      <button class="editBtn" id="editSkillsBtn" onclick="enableSkillsEdit()">Edit</button>
+      <button id="saveSkillsBtn" onclick="saveSkillsChanges()">Save</button>
+      <button id="cancelSkillsBtn" onclick="cancelSkillsEdit()">Cancel</button>
     </div>
     <div class="horizontal">
       <hr>
@@ -201,6 +210,7 @@
       <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
     </div>
   </div>
+</div>
   <script src="/javascripts/StudentProfile.js"></script>
   <script src="/javascripts/location.js"></script>
 

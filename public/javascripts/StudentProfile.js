@@ -213,14 +213,56 @@ function cancelLinkedInEdit() {
 
 //Functions for Twitter
 
+function enableTwitterEdit() {
+  toggleEditElements("editableTwitter", "editTwitterBtn", "saveTwitterBtn", "cancelTwitterBtn");
+}
+
+function saveTwitterChanges() {
+  toggleEditElements("editableTwitter", "editTwitterBtn", "saveTwitterBtn", "cancelTwitterBtn");
+}
+
+function cancelTwitterEdit() {
+  toggleEditElements("editableTwitter", "editTwitterBtn", "saveTwitterBtn", "cancelTwitterBtn");
+}
+
+//Fuctions for Work
+
 function enableWorkEdit() {
   toggleEditElements("editableWork", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
 }
 
 function saveWorkChanges() {
-  toggleEditElements("editabWorkIn", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
+  toggleEditElements("editabWork", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
 }
 
 function cancelWorkEdit() {
-  toggleEditElements("editabWorkIn", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
+  toggleEditElements("editabWork", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
+}
+
+//Function for Education
+
+function enableEducationEdit() {
+  toggleEditElements("editableEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
+}
+
+function saveEducationChanges() {
+  toggleEditElements("editabEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
+}
+
+function cancelEducationEdit() {
+  toggleEditElements("editabEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
+}
+
+// Functions for Skills
+
+function enableSkillsEdit() {
+  toggleEditElements("editableSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
+}
+
+function saveSkillsChanges() {
+  toggleEditElements("editabSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
+}
+
+function cancelSkillsEdit() {
+  toggleEditElements("editabSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
 }
