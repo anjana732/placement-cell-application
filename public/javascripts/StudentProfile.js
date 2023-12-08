@@ -176,9 +176,51 @@ function enableWebsiteEdit() {
 }
 
 function saveWebsiteChanges() {
-  toggleEditElements("editableWebsite", "editSummaryBtn", "saveSummaryBtn", "cancelWebsiteBtn");
+  toggleEditElements("editableWebsite", "editWebsiteBtn", "saveWebsiteBtn", "cancelWebsiteBtn");
 }
 
 function cancelWebsiteEdit() {
   toggleEditElements("editableWebsite", "editWebsiteBtn", "saveWebsiteBtn", "cancelWebsiteBtn");
+}
+
+// Functions for Github
+
+function enableGithubEdit() {
+  toggleEditElements("editableGithub", "editGithubBtn", "saveGithubBtn", "cancelGithubBtn");
+}
+
+function saveGithubChanges() {
+  toggleEditElements("editableGithub", "editGithubBtn", "saveGithubBtn", "cancelGithubBtn");
+}
+
+function cancelGithubEdit() {
+  toggleEditElements("editableGithub", "editGithubBtn", "saveGithubBtn", "cancelGithubBtn");
+}
+
+// Functions for linkedin
+
+function enableLinkedInEdit() {
+  toggleEditElements("editableLinkedIn", "editLinkedInBtn", "saveLinkedInBtn", "cancelLinkedInBtn");
+}
+
+function saveLinkedInChanges() {
+  toggleEditElements("editableLinkedIn", "editLinkedInBtn", "saveLinkedInBtn", "cancelLinkedInBtn");
+}
+
+function cancelLinkedInEdit() {
+  toggleEditElements("editableLinkedIn", "editLinkedInBtn", "saveLinkedInBtn", "cancelLinkedInBtn");
+}
+
+//Functions for Twitter
+
+function enableWorkEdit() {
+  toggleEditElements("editableWork", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
+}
+
+function saveWorkChanges() {
+  toggleEditElements("editabWorkIn", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
+}
+
+function cancelWorkEdit() {
+  toggleEditElements("editabWorkIn", "editWorkBtn", "saveWorkBtn", "cancelWorkBtn");
 }
