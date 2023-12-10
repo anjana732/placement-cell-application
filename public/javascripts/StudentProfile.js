@@ -246,11 +246,11 @@ function enableEducationEdit() {
 }
 
 function saveEducationChanges() {
-  toggleEditElements("editabEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
+  toggleEditElements("editableEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
 }
 
 function cancelEducationEdit() {
-  toggleEditElements("editabEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
+  toggleEditElements("editableEducation", "editEducationBtn", "saveEducationBtn", "cancelEducationBtn");
 }
 
 // Functions for Skills
@@ -260,9 +260,9 @@ function enableSkillsEdit() {
 }
 
 function saveSkillsChanges() {
-  toggleEditElements("editabSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
+  toggleEditElements("editableSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
 }
 
 function cancelSkillsEdit() {
-  toggleEditElements("editabSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
+  toggleEditElements("editableSkills", "editSkillsBtn", "saveSkillsBtn", "cancelSkillsBtn");
 }
