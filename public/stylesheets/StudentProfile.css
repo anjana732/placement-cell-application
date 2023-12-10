@@ -138,7 +138,9 @@ button {
 #saveWorkBtn,
 #saveTwitterBtn,
 #saveSkillsBtn,
-#saveEducationBtn {
+#saveEducationBtn,
+#saveCGPABtn,
+#saveCourseBtn {
   display: none;
   background-color: rgb(133, 178, 236);
   color: white;
@@ -158,7 +160,9 @@ button {
 #cancelWorkBtn,
 #cancelTwitterBtn,
 #cancelSkillsBtn,
-#cancelEducationBtn {
+#cancelEducationBtn,
+#cancelCourseBtn,
+#cancelCGPABtn {
   display: none;
   background-color: rgb(243, 111, 111);
   border: none;
