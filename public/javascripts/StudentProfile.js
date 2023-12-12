@@ -1,3 +1,4 @@
+//Toggle Function
 function toggleEditElements(inputId, editBtnId, saveBtnId, cancelBtnId) {
   var inputField = document.getElementById(inputId);
   var editBtn = document.getElementById(editBtnId);
