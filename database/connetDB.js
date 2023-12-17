@@ -4,7 +4,6 @@ require('dotenv').config();
 const username = process.env.USER_NAME;
 const password = process.env.PASSWORD;
 
-// const uri = `mongodb+srv://${username}:${password}@cluster0.ftniq.mongodb.net/portfolioDB`;
 
 const dbName = "placementDB";
 const uri = `mongodb://localhost/${dbName}`
