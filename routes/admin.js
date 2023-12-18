@@ -3,6 +3,7 @@ var router = express.Router();
 const postJob = require("../models/jobSchema");
 const admin = require('../models/adminSchema');
 const mongoose = require('mongoose');
+const students = require('../models/studentSchema');
 
 router.get('/AdminRegister', (req, res) => {
     res.render('AdminRegister');
@@ -111,5 +112,27 @@ router.get('/AdminRegister', (req, res) => {
       res.status(500).send('Internal Server Error');
     }*/
   });
+  router.get('/StudentDetails', async (req, res) => {
   
+   /* try {
+      // Fetch data from MongoDB
+      const jobs = await postJob.find();
+  
+      // Render the EJS template and pass the data to it
+      res.render('AdminDashBoard', { jobs });
+    } catch (error) {
+      console.error(error);
+    }*/
+    try {
+      // Fetch data from MongoDB
+      const users = await students.find();
+  
+      // Render the EJS template and pass the data to it
+      res.render('StudentDetails', { users });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+      
+    });
 module.exports = router;

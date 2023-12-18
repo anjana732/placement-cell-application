@@ -1,29 +1,24 @@
-<!-- views/student-details.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Details</title>
-  <link rel="stylesheet" href="/styles.css">
+  <title>User Data</title>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/student-details">Student Details</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>Student Details</h1>
-    <ul>
-      <% students.forEach(student => { %>
-        <li><%= student.name %> - Age: <%= student.age %>, Grade: <%= student.grade %></li>
-      <% }); %>
-    </ul>
-  </main>
+  <h1>User Data</h1>
+  <ul>
+    <% users.forEach(user => { %>
+      <li>
+        <h2><%= user.name %></h2>
+        <p>Registration Number: <%= user.regNo %></p>
+        <p>Email: <%= user.email %></p>
+        <!-- Note: It's not recommended to display passwords in the UI -->
+      </li>
+    <% }); %>
+  </ul>
 </body>
+
 </html>
