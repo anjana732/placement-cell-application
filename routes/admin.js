@@ -89,7 +89,18 @@ router.get('/AdminRegister', (req, res) => {
   
   //getting student details
   router.get('/student-details', async (req, res) => {
+  
     try {
+      // Fetch data from MongoDB
+      const jobs = await postJob.find();
+  
+      // Render the EJS template and pass the data to it
+      res.render('AdminDashBoard', { jobs });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+    /* try {
       // Fetch all student details from the database
       const students = await Student.find();
   
@@ -98,7 +109,7 @@ router.get('/AdminRegister', (req, res) => {
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');
-    }
+    }*/
   });
   
 module.exports = router;

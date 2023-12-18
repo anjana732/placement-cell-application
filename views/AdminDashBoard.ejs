@@ -9,6 +9,7 @@
 
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
   <title>Your University</title>
+  
 </head>
 
 <body>
@@ -58,22 +59,21 @@
   </div>
   <!--Main Content-->
   <h1>Recent Posts</h1>
-  <div>
-    <% if (Array.isArray(jobs) && jobs.length > 0) { %>
-      <% jobs.forEach(job => { %>
-        <div class="job-post">
-          <h2><%= job.companyName %></h2>
-          <p>Location: <%= job.location %></p>
-          <p>Job Role: <%= job.jobRole %></p>
-          <p>Salary: $<%= job.salary %></p>
-          <p>Description: <%= job.jobDesc %></p>
-          <p>Apply Link: <a href="<%= job.applyLink %>" target="_blank">Apply Now</a></p>
-          <p>Last Date: <%= job.lastDate.toISOString().split('T')[0] %></p>
-        </div>
-      <% }); %>
-    <% } else { %>
-      <p>No jobs available</p>
-    <% } %>
+  <div class="main-content">
+    <h1>Job Listings</h1>
+  <ul>
+    <% jobs.forEach(job => { %>
+      <li>
+        <h2><%= job.companyName %></h2>
+        <p>Location: <%= job.location %></p>
+        <p>Job Role: <%= job.jobRole %></p>
+        <p>Salary: <%= job.salary %></p>
+        <p>Description: <%= job.jobDesc %></p>
+        <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
+        <p>Last Date: <%= job.lastDate.toDateString() %></p>
+      </li>
+    <% }); %>
+  </ul>
   </div>
 
   <script src="/javascripts/jobPostPopUp.js"></script>
