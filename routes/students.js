@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const Student = require('../models/studentSchema')
+const postJob = require("../models/jobSchema");
 
 router.get('/StudentRegister', async(req,res)=>{
   res.render('StudentRegister');
@@ -45,5 +46,18 @@ router.post('/StudentRegister', async(req, res) => {
     res.render('StudentProfile');
   });
   
+  router.get('/StudentDetails', async (req, res) => {
+  
+    try {
+      // Fetch data from MongoDB
+      const jobs = await postJob.find();
+  
+      // Render the EJS template and pass the data to it
+      res.render('StudentDashBoard', { jobs });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
 
 module.exports = router;

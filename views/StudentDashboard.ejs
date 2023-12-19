@@ -23,23 +23,22 @@
         <li><a href="/student/StudentProfile"><i class="fa-solid fa-user"></i>Profile</a></li>
         <li><a href="#"><i class="fa-solid fa-regular fa-file"></i>Resume Building</a></li>
       </ul>
-     <!-- <div class="popup" id="popupForm">
-        <div class="popup-content">
-          <span class="close" id="closePopup"><i class="fa-solid fa-circle-xmark"></i></span>
-          &times;
-          <form action="/admin/AdminDashBoard" method="post">
-            <input type="text" id="company-name" name="companyName" required placeholder="Comapany Name">
-            <input type="text" id="location" name="location" required placeholder="Location">
-            <input type="text" id="job-role" name="jobRole" required placeholder="Job Role">
-            <input type="text" id="salary" name="salary" required placeholder="Salary">
-            <input type="text" id="eligiblity" name="eligiblity" required placeholder="Eligiblity">
-            <input type="text" id="job-description" name="jobDesc" required placeholder="Job Description">
-            <input type="text" id="apply-link" name="applyLink" required placeholder="Apply Link">
-            <input type="date" id="date" name="lastDate" required>
-            <button type="submit">Post Job</button>
-          </form>
-        </div>
-      </div> -->
+      <div class="main-content">
+        <h1>Job Listings</h1>
+      <ul>
+        <% jobs.forEach(job => { %>
+          <li>
+            <h2><%= job.companyName %></h2>
+            <p>Location: <%= job.location %></p>
+            <p>Job Role: <%= job.jobRole %></p>
+            <p>Salary: <%= job.salary %></p>
+            <p>Description: <%= job.jobDesc %></p>
+            <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
+            <p>Last Date: <%= job.lastDate.toDateString() %></p>
+          </li>
+        <% }); %>
+      </ul>
+      </div>
     </nav>
   </div>
   <div class="navbar">

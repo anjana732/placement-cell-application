@@ -47,21 +47,6 @@ router.get('/AdminRegister', (req, res) => {
     }  
   });
   
- /* router.post('/AdminDashBoard', async (req, res) => {
-    try {
-      const { companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate} = req.body;
-      const PostJob = new postJob({ companyName, location, jobRole, salary, eligibility, jobDesc, applyLink, lastDate });
-      console.log('ravi');
-      await jobs.create();
-      console.log('ravi1');
-      res.redirect('/admin/AdminDashBoard');
-      console.log('ravi2');
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
-  */
   router.post('/AdminDashBoard', async (req, res) => {
    
      try {
@@ -76,9 +61,6 @@ router.get('/AdminRegister', (req, res) => {
   });
   
   router.get('/AdminDashBoard', async (req, res) => {
-   /* postJob.find()
-    .then(postedjobs => res.json(postedjobs))
-    .catch(err => res.json(err))*/
      try {
       const jobs = await postJob.find().exec();
       res.render('AdminDashBoard', { jobs });
@@ -101,28 +83,10 @@ router.get('/AdminRegister', (req, res) => {
       console.error(error);
       res.status(500).send('Internal Server Error');
     }
-    /* try {
-      // Fetch all student details from the database
-      const students = await Student.find();
-  
-      // Render the student details page
-      res.render('student-details', { students });
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
-    }*/
   });
   router.get('/StudentDetails', async (req, res) => {
   
-   /* try {
-      // Fetch data from MongoDB
-      const jobs = await postJob.find();
   
-      // Render the EJS template and pass the data to it
-      res.render('AdminDashBoard', { jobs });
-    } catch (error) {
-      console.error(error);
-    }*/
     try {
       // Fetch data from MongoDB
       const users = await students.find();
