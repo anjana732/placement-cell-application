@@ -77,7 +77,7 @@ router.get('/AdminRegister', (req, res) => {
       // Fetch data from MongoDB
       const jobs = await postJob.find();
   
-      // Render the EJS template and pass the data to it
+      
       res.render('AdminDashBoard', { jobs });
     } catch (error) {
       console.error(error);
@@ -88,10 +88,9 @@ router.get('/AdminRegister', (req, res) => {
   
   
     try {
-      // Fetch data from MongoDB
+    
       const users = await students.find();
-  
-      // Render the EJS template and pass the data to it
+
       res.render('StudentDetails', { users });
     } catch (error) {
       console.error(error);
