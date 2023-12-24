@@ -24,20 +24,7 @@
         <li><a href="#"><i class="fa-solid fa-regular fa-file"></i>Resume Building</a></li>
       </ul>
       <div class="main-content">
-        <h1>Job Listings</h1>
-      <ul>
-        <% jobs.forEach(job => { %>
-          <li>
-            <h2><%= job.companyName %></h2>
-            <p>Location: <%= job.location %></p>
-            <p>Job Role: <%= job.jobRole %></p>
-            <p>Salary: <%= job.salary %></p>
-            <p>Description: <%= job.jobDesc %></p>
-            <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
-            <p>Last Date: <%= job.lastDate.toDateString() %></p>
-          </li>
-        <% }); %>
-      </ul>
+       
       </div>
     </nav>
   </div>
