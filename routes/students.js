@@ -88,4 +88,13 @@ router.post('/StudentRegister', async(req, res) => {
     }
   });
 
+  router.get('/ResumeFrontPage', async(req,res)=>{
+    res.render('ResumeFrontPage');
+  })
+  
+  router.get('/Resume', async(req,res)=>{
+    res.render('Resume');
+  })
+  
+
 module.exports = router;
