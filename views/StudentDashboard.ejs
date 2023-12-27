@@ -24,7 +24,14 @@
         <li><a href="#"><i class="fa-solid fa-regular fa-file"></i>Resume Building</a></li>
       </ul>
       <div class="main-content">
-       
+        <% job.forEach(jobs => { %>
+          <div class="job-item">
+            <h3><%= jobs.companyName %></h3>
+            <p>Location: <%= jobs.location %></p>
+            <p>Role: <%= jobs.jobRole %></p>
+           
+          </div>
+        <% }); %>
       </div>
     </nav>
   </div>

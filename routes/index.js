@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-//mod
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');

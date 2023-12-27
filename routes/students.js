@@ -3,6 +3,7 @@ var router = express.Router();
 const Student = require('../models/studentSchema')
 const postJob = require("../models/jobSchema");
 
+
 router.get('/StudentRegister', async(req,res)=>{
   res.render('StudentRegister');
 })
@@ -42,18 +43,45 @@ router.post('/StudentRegister', async(req, res) => {
     }
   });
 
+ /*router.get('/StudentDashboard', async (req, res) => {
+    try {
+      // Fetch data from the database
+      const j = await jobs.find();
+  
+      // Render your EJS template and pass the data
+      res.render('StudentDashboard', { j });
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+  /*router.get('/student-details', async (req, res) => {
+  
+    try {
+      // Fetch data from MongoDB
+      const jobs = await jobs.find();
+  
+      
+      res.render('StudentDashboard', { jobs });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Internal Server Error');
+    }
+  });*/
+
   router.get('/StudentProfile', (req, res) => {
     res.render('StudentProfile');
   });
   
-  router.get('/StudentDetails', async (req, res) => {
+  router.get('/StudentDashboard', async (req, res) => {
   
     try {
       // Fetch data from MongoDB
-      const jobs = await postJob.find();
-  
+      const job = await postJob.find();
+      console.log(job);
+      
       // Render the EJS template and pass the data to it
-      res.render('StudentDashBoard', { jobs });
+      res.render('StudentDashboard', { job });
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');
