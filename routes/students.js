@@ -2,6 +2,18 @@ var express = require('express');
 var router = express.Router();
 const Student = require('../models/studentSchema')
 const postJob = require("../models/jobSchema");
+const fs = require("fs");
+const path = require("path");
+
+const filePath = path.join(__dirname,"scientist_job.json");
+
+fs.readFile(filePath,{encoding:"utf-8"},function(data,err){
+  if(err){
+    console.log(err);
+  }else{
+    console.log(data);
+  }
+})
 
 
 router.get('/StudentRegister', async(req,res)=>{
@@ -94,6 +106,10 @@ router.post('/StudentRegister', async(req, res) => {
   
   router.get('/Resume', async(req,res)=>{
     res.render('Resume');
+  })
+
+  router.get('/jobs', async(req,res)=>{
+    res.render('jobs');
   })
   
 

@@ -202,12 +202,36 @@
       <hr>
     </div>
     <div class="container">
-      <label for="1stSemCGPA">1st Semester CGPA</label>
+      <label for="1stSemCGPA">Overall CGPA</label>
       <input type="text" id="editableCGPA" placeholder="Your CGPA" disabled>
       <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
       <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
       <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
     </div>
+    <div class="horizontal">
+      <hr>
+    </div>
+    <div class="container">
+      <label for="arrearSelection">Arrear/Backlog</label>
+      <select id="arrearSelection" onchange="toggleArrearTextbox()">
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
+      </select>
+  
+      <div id="arrearDetails" style="display: none;">
+          <label for="arrearSubjects">Subjects with Arrear:</label>
+          <input type="text" id="arrearSubjects" placeholder="Enter subjects with arrear">
+      </div>
+  
+      <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
+      <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
+      <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
+      <!--<label for="1stSemCGPA">Arrear/Backlog</label>
+      <input type="text" id="editableCGPA" placeholder="Your CGPA" disabled>
+      <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
+      <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
+      <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
+    </div>-->
   </div>
 </div>
   <script src="/javascripts/StudentProfile.js"></script>
