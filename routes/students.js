@@ -11,9 +11,7 @@ fs.readFile(filePath,{encoding:"utf-8"},function(data,err){
   if(err){
     console.log(err);
   }else{
-    
-    
-    console.log(data);
+   // console.log(data);
   }
 })
 
@@ -68,20 +66,20 @@ router.post('/StudentRegister', async(req, res) => {
       console.error('Error fetching data:', error);
       res.status(500).send('Internal Server Error');
     }
-  });
-  /*router.get('/student-details', async (req, res) => {
+  });*/
+  router.get('/student-details', async (req, res) => {
   
     try {
       // Fetch data from MongoDB
-      const jobs = await jobs.find();
+      const job = await jobs.find();
   
       
-      res.render('StudentDashboard', { jobs });
+      res.render('StudentDashboard', { job });
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');
     }
-  });*/
+  });
 
   router.get('/StudentProfile', (req, res) => {
     res.render('StudentProfile');
@@ -92,6 +90,7 @@ router.post('/StudentRegister', async(req, res) => {
     try {
       // Fetch data from MongoDB
       const job = await postJob.find();
+      console.log("--------------------------------------------------------------------------");
       console.log(job);
       
       // Render the EJS template and pass the data to it
@@ -111,7 +110,7 @@ router.post('/StudentRegister', async(req, res) => {
   })
 
   router.get('/jobs', (req, res) => {
-    const jobListings = require('/student/scientist_job.json'); // Update the path accordingly
+    const jobListings = require('./scientist_job.json'); // Update the path accordingly
     res.render('jobs', { jobListings });
 });
   
