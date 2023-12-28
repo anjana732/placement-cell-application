@@ -11,6 +11,8 @@ fs.readFile(filePath,{encoding:"utf-8"},function(data,err){
   if(err){
     console.log(err);
   }else{
+    
+    
     console.log(data);
   }
 })
@@ -108,9 +110,10 @@ router.post('/StudentRegister', async(req, res) => {
     res.render('Resume');
   })
 
-  router.get('/jobs', async(req,res)=>{
-    res.render('jobs');
-  })
+  router.get('/jobs', (req, res) => {
+    const jobListings = require('/student/scientist_job.json'); // Update the path accordingly
+    res.render('jobs', { jobListings });
+});
   
 
 module.exports = router;
