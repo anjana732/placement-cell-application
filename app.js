@@ -5,7 +5,9 @@ var logger = require('morgan');
 const connectDB = require('./database/connetDB')
 const studentRouter = require('./routes/students');
 const adminRouter = require('./routes/admin');
+const companyRouter = require('./routes/company');
 const session = require('express-session');
+
 
 var app = express();
 
@@ -20,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/student', studentRouter);
 app.use('/admin', adminRouter);
+app.use('/company', companyRouter);
 
 app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });

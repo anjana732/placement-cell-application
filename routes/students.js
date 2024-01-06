@@ -1,20 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const Student = require('../models/studentSchema')
-const postJob = require("../models/jobSchema");
+const Jobs = require("../models/jobSchema");
 const fs = require("fs");
 const path = require("path");
 
 const filePath = path.join(__dirname,"scientist_job.json");
-
-fs.readFile(filePath,{encoding:"utf-8"},function(data,err){
-  if(err){
-    console.log(err);
-  }else{
- 
-  }
-})
-
 
 router.get('/StudentRegister', async(req,res)=>{
   res.render('StudentRegister');
@@ -45,8 +36,9 @@ router.post('/StudentRegister', async(req, res) => {
       const student = await Student.findOne({ email, password }).exec();
   
       if (student) {
-        res.render('StudentDashboard');
+        res.redirect('/student/StudentDashboard');
       } else {
+        console.log('Invalid username or password.');
         res.send('Invalid username or password.');
       }
     } catch (err) {
@@ -67,14 +59,13 @@ router.post('/StudentRegister', async(req, res) => {
       res.status(500).send('Internal Server Error');
     }
   });*/
-  router.get('/student-details', async (req, res) => {
+  router.get('/StudentDashboard', async (req, res) => {
   
     try {
       // Fetch data from MongoDB
-      const job = await jobs.find();
-  
+      const jobs = await Jobs.find();
+      res.render('StudentDashboard', { jobs });
       
-      res.render('StudentDashboard', { job });
     } catch (error) {
       console.error(error);
       res.status(500).send('Internal Server Error');
@@ -85,21 +76,7 @@ router.post('/StudentRegister', async(req, res) => {
     res.render('StudentProfile');
   });
   
-  router.get('/StudentDashboard', async (req, res) => {
-  
-    try {
-      // Fetch data from MongoDB
-      const job = await postJob.find();
-      console.log("--------------------------------------------------------------------------");
-      console.log(job);
-      
-      // Render the EJS template and pass the data to it
-      res.render('StudentDashboard', { job });
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Internal Server Error');
-    }
-  });
+ 
 
   router.get('/ResumeFrontPage', async(req,res)=>{
     res.render('ResumeFrontPage');
@@ -110,8 +87,22 @@ router.post('/StudentRegister', async(req, res) => {
   })
 
   router.get('/jobs', (req, res) => {
-    const jobListings = require('./scientist_job.json'); // Update the path accordingly
+    const jobListings = require('./scientist_job.json');
     res.render('jobs', { jobListings });
+});
+
+router.post('/StudentDetail', async (req, res) => {
+  try {
+    const userData = req.body; 
+    const newUser = new User(userData);
+
+    const savedUser = await newUser.save();
+
+    res.status(201).json(savedUser); 
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
   
 

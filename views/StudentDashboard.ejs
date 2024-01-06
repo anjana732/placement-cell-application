@@ -23,16 +23,6 @@
         <li><a href="/student/StudentProfile"><i class="fa-solid fa-user"></i>Profile</a></li>
         <li><a href="/student/ResumeFrontPage"><i class="fa-solid fa-regular fa-file"></i>Resume Building</a></li>
       </ul>
-      <div class="main-content">
-        <% job.forEach(jobs => { %>
-          <div class="job-item">
-            <h3><%= jobs.companyName %></h3>
-            <p>Location: <%= jobs.location %></p>
-            <p>Role: <%= jobs.jobRole %></p>
-           
-          </div>
-        <% }); %>
-      </div>
     </nav>
   </div>
   <div class="navbar">
@@ -42,15 +32,22 @@
     <div class="right-item">
       <div class="notification">
         <a href="#notificaion"><i class="fa-regular fa-bell fa-2x"></i></a>
-
       </div>
       <div class="profile">
         <img class="profile-img" src="university_logo.png" width="35" height="35">
       </div>
+      <% jobs.forEach(job => { %>
+        <div class="job-item">
+          <h3><%= job.companyName %></h3>
+          <p>Location: <%= job.location %></p>
+          <p>Role: <%= job.jobRole %></p>
+         
+        </div>
+      <% }); %>
     </div>
   </div>
  
-
+ 
 
   <script src="/javascripts/jobPostPopUp.js"></script>
 
