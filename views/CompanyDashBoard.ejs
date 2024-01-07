@@ -17,16 +17,16 @@
       <img src="/images/logoPU.jpg" alt="University Logo" width="50" height="50">
     </div>
     <nav>
-      <ul>
+  <!--   <ul>
         <li><a href="#"><i class="fa-solid fa-gauge-simple-high"></i>Dashboard</a></li>
         <li><a href="#"><i class="fa-solid fa-suitcase"></i>Students Details</a></li>
         <li class="popup-trigger"><a href="#"><i class="fa-solid fa-share-from-square"></i>Recommendations</a></li>
-   <!-- <li><a href="#"><i class="fa-solid fa-users"></i></i>Students Detail</a></li> -->
+    <li><a href="#"><i class="fa-solid fa-users"></i></i>Students Detail</a></li>
       </ul>
       <div class="popup" id="popupForm">
         <div class="popup-content">
           <span class="close" id="closePopup"><i class="fa-solid fa-circle-xmark"></i></span>
-          <!--&times;-->
+      
           <form action="/admin/AdminDashBoard" method="post">
             <input type="text" id="company-name" name="companyName" required placeholder="Comapany Name">
             <input type="text" id="location" name="location" required placeholder="Location">
@@ -41,7 +41,7 @@
         </div>
       </div>
     </nav>
-  </div>
+  </div>--> 
   <div class="navbar">
     <div class="search-box">
       <input type="text" placeholder="Search...">
@@ -56,7 +56,7 @@
       </div>
     </div>
   </div>
-  <!--Main Content-->
+  <!--Main Content
   <h1>Recent Posts</h1>
   <div>
     <% if (Array.isArray(jobs) && jobs.length > 0) { %>
@@ -74,7 +74,7 @@
     <% } else { %>
       <p>No jobs available</p>
     <% } %>
-  </div>
+  </div>-->
 
   <script src="/javascripts/jobPostPopUp.js"></script>
 

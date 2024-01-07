@@ -36,7 +36,7 @@ router.get('/CompanyRegister', (req, res) => {
   
       if (newadmin) {
         // res.render('AdminDashBoard');
-        res.redirect('/company/CompanyDashBoard');
+        res.redirect('CompanyDashBoard');
       } else {
         res.send('Invalid username or password.');
       }
