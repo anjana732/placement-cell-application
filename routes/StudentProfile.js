@@ -27,7 +27,6 @@ router.post('/StudentRegister', async(req, res) => {
     const { email, password } = req.body;
   
     try {
-      // Check if the Studentexists in the database
       const student = await Student.findOne({ email, password }).exec();
   
       if (student) {

@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Set your desired background color */
+    padding: 10px 20px;
+    color: white;
+}
+
+.notification{
+    order: 1; /* Move logo to the left */
+}
+
+.notification,
+.profile {
+    order: 3; /* Move notification and profile to the right */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the buttons */
+}
+
+button {
+
+    padding: 30px;
+    background-color: #007BFF; /* Set your desired button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+    display: block;
+    size: 30px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Set your desired button hover color */
+}
+.logo{
+    border-radius: 50%;
+}

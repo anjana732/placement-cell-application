@@ -25,7 +25,7 @@
   }
 });*/
 
-// Connecting on port with server
+ Connecting on port with server
 
 code to fetch data from jobs collection to student dashboard
  <% job.forEach(jobs => { %>
@@ -36,5 +36,12 @@ code to fetch data from jobs collection to student dashboard
            
           </div>
         <% }); %>
-
-
+error generating code
+   <div class="main-content">
+        <% job.forEach(jobs => { %>
+          <div class="job-item">
+            <h3><%= jobs.companyName %></h3>
+            <p>Location: <%= jobs.location %></p>
+            <p>Role: <%= jobs.jobRole %></p>   
+          </div>
+        <% }); %>

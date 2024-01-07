@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/Dashboard.css">
   <link rel="stylesheet" href="/stylesheets/jobPostPopUp.css">
-
+  <link rel="stylesheet" href="/stylesheets/adminDashboard.css">
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
-  <title>Your University</title>
+  <title>Admin Dashboard</title>
   
 </head>
 
@@ -60,13 +60,14 @@
   <!--Main Content-->
     <div class="main-content">
       <h1>Recent Job Posts</h1>
-  <ul>
+  <ul class="dataUL">
     <% jobs.forEach(job => { %>
-      <li>
+      <li class="dataList">
         <h2><%= job.companyName %></h2>
         <p>Location: <%= job.location %></p>
         <p>Job Role: <%= job.jobRole %></p>
         <p>Salary: <%= job.salary %></p>
+        
         <p>Description: <%= job.jobDesc %></p>
         <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
         <p>Last Date: <%= job.lastDate.toDateString() %></p>
