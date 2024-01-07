@@ -1,0 +1,30 @@
+.main-content {
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .dataUL {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Optional: Adjust to your preference */
+  }
+  
+  .dataList {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px; /* Set a maximum width for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  li:hover {
+    transform: translateY(-5px);
+  }
+  

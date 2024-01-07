@@ -85,8 +85,9 @@ body {
   color: black;
 }       
 .main-content{
-  width: 50%;
+  width: 79%;
   float: right;
   height: 100%;
+  margin-left: 200px;
  
 }                         
