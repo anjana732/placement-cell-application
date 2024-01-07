@@ -12,7 +12,7 @@ router.get('/CompanyRegister', (req, res) => {
     const { name, Id, email, password } = req.body;
   
     // Create a new user
-    const newCompany = new company({ name, Id, email, password });
+    const newCompany = new Company({ name, Id, email, password });
   
     try {
       await newCompany.save();

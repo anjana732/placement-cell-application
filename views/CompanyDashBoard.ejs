@@ -26,15 +26,38 @@
     <button onclick="openResumeMatcher()">Resume Matcher</button>
   </div>
 
+  <div id="studentDetailsContainer">
+    <!-- Student details will be rendered here -->
+  </div>
+
   <script>
     async function getStudentDetails() {
       console.log("Getting student details...");
-      const response = await fetch('/admin/StudentDetails');
-      console.log('done');
-      const data = await response.json();
-      console.log('-------------------------------------------------------');
-      console.log(data);
+      const data = await fetch('/student/StudentDetails');
+      const student = await data.json();
+      console.log(student);
+      renderStudentDetails(student);
+    }
 
+    function renderStudentDetails(students) {
+      const studentDetailsContainer = document.getElementById('studentDetailsContainer');
+
+      // Assuming students is an array of objects
+      const detailsHTML = `
+        <h2>Student Details</h2>
+        <ul>
+          ${students.map(student => `
+            <li>
+              <strong>Email:</strong> ${student.email}<br>
+              <strong>Name:</strong> ${student.name}<br>
+              <strong>Password:</strong> ${student.password}<br>
+              <strong>Registration Number:</strong> ${student.regNo}
+            </li>
+          `).join('')}
+        </ul>
+      `;
+
+      studentDetailsContainer.innerHTML = detailsHTML;
     }
 
     function openResumeMatcher() {

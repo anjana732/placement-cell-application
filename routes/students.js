@@ -64,8 +64,6 @@ router.post('/StudentRegister', async(req, res) => {
     res.render('StudentProfile');
   });
   
- 
-
   router.get('/ResumeFrontPage', async(req,res)=>{
     res.render('ResumeFrontPage');
   })
@@ -90,6 +88,19 @@ router.post('/StudentDetail', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/StudentDetails', async (req, res) => {
+  try {
+  
+    const users = await Student.find();
+    // res.render('CompanyDashBoard', {users});
+    res.status(200).send(users);
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
   }
 });
 
