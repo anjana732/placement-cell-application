@@ -45,3 +45,16 @@ error generating code
             <p>Role: <%= jobs.jobRole %></p>   
           </div>
         <% }); %>
+
+
+ <% jobs.forEach(job => { %>
+        <div class="job-item">
+          <h3><%= job.companyName %></h3>
+          <p>Location: <%= job.location %></p>
+          <p>Role: <%= job.jobRole %></p>
+          <p>Salary: <%= job.salary %></p>
+        <p>Description: <%= job.jobDesc %></p>
+        <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
+        <p>Last Date: <%= job.lastDate.toDateString() %></p>
+        </div>
+      <% }); %>

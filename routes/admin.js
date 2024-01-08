@@ -96,4 +96,8 @@ router.get('/AdminRegister', (req, res) => {
     }
       
     });
+    router.get('/jobs', (req, res) => {
+      const jobListings = require('./scientist_job.json');
+      res.render('jobs', { jobListings });
+  });
 module.exports = router;
