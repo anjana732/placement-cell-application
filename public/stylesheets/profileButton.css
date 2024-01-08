@@ -1,0 +1,26 @@
+/* StudentProfile.css */
+
+.buttons {
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+  .editBtn,
+  #saveBtn,
+  #cancelBtn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .editBtn:hover,
+  #saveBtn:hover,
+  #cancelBtn:hover {
+    background-color: #2980b9;
+  }
+  

@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
     name: String,
+    regNo:String,
     gender: String,
-    location: String,
     dob: Date,
     summary: String,
     website: String,
@@ -14,10 +14,8 @@ const userSchema = new mongoose.Schema({
     education: String,
     skills: String,
     cgpa: Number,
-    Arrear: String,
-    regNo: Number
   });
   
-  const User = mongoose.model('StudentDetail', userSchema);
+  const Profile = mongoose.model('StudentDetail', userSchema);
 
-  module.exports = User;
+  module.exports = Profile;

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/StudentProfile.css">
+  <!-- <link rel="stylesheet" href="/stylesheets/profileButton.css"> -->
   <script src="https://kit.fontawesome.com/4800d7071c.js" crossorigin="anonymous"></script>
   <title>Student Profile</title>
 </head>
@@ -24,218 +25,147 @@
     </nav>
   </div>
   <div class="rightdiv">
-  <div class="upperDiv">
-  
-    <img src="/images/Anjana.jpg" alt="Display picture" width="120" height="150">
+    <div class="upperDiv">
 
-  </div>
-  <form action="/student/StudentDetail" method="post">
-    <h3>Basic Information</h3>
-    <div class="container">
-      <label for="name">Name</label>
-      <input type="text" id="editableInput" placeholder="Your Name" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <br>
-      <hr>
-      <br>
-    </div>
+      <img src="/images/Anjana.jpg" alt="Display picture" width="120" height="150">
 
-    <div class="container">
-      <label for="gender">Gender</label>
-      <select id="inputGender" disabled>
-        <option value="select">Select...</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Others">Other</option>
-      </select>
-      <button class="editBtn" id="editGenderBtn" onclick="enableGenderEdit()">Edit</button>
-      <button id="saveGenderBtn" onclick="saveGenderChanges()">Save</button>
-      <button id="cancelGenderBtn" onclick="cancelGenderEdit()">Cancel</button>
     </div>
-    <div class="horizontal">
-      <br>
-      <hr>
-      <br>
-    </div>
-    <!--...........................Location ............................-->
-    <div class="container">
-      <label for="location">Location</label>
-     
-      <select class="locationSelect" class="form-select country" aria-label="Default select example" onchange="loadStates()">
-        <option selected>Select Country</option>
-      </select>
-      <select class="locationSelect"  class="form-select state" aria-label="Default select example" onchange="loadCities()">
-        <option selected>Select State</option>
-      </select>
-      <select class="locationSelect"  class="form-select city" aria-label="Default select example">
-        <option selected>Select City</option>
-      </select>
-      <button class="editBtn" id="editLocation" onclick="enableLocationEdit()">Edit</button>
-      <button id="savelocation" onclick="saveLocationChanges()">Save</button>
-      <button id="cancellocation" onclick="cancelLocationEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <br>
-      <hr>
-      <br>
-    </div>
-    <!--..............................Birthday...................................-->
-    <div class="container">
-      <label for="birthday">Birthday</label>
-      <input type="text" id="editableInput" disabled>
-      <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
-      <button id="saveBtn" onclick="saveChanges()">Save</button>
-      <button id="cancelBtn" onclick="cancelEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <br>
-      <hr>
-      <br>
-    </div>
-    <!--..................................Summary...........................................-->
-    <div class="container">
-      <label for="summary">Summary</label>
-      <textarea id="editableSummary" placeholder="Tell us about yourself (interests, experience, etc.)" disabled></textarea>
-      <button class="editBtn" id="editSummaryBtn" onclick="enableSummaryEdit()">Edit</button>
-      <button id="saveSummaryBtn" onclick="saveSummaryChanges()">Save</button>
-      <button id="cancelSummaryBtn" onclick="cancelSummaryEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--..........................website...........................................-->
-    <div class="container">
-      <label for="website">Website</label>
-     <!-- <textarea name="website" id="editableWebsite" disabled></textarea> -->
-      <input type="text" id="editableWebsite" placeholder="Any blogpost Link" disabled>
-      <button class="editBtn" id="editWebsiteBtn" onclick="enableWebsiteEdit()">Edit</button>
-      <button id="saveWebsiteBtn" onclick="saveWebsiteChanges()">Save</button>
-      <button id="cancelWebsiteBtn" onclick="cancelWebsiteEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--............................Github..............................................-->
-    <div class="container">
-      <label for="github">Github</label>
-      <input type="text" id="editableGithub" placeholder="Your Github Link" disabled>
-      <button class="editBtn" id="editGithubBtn" onclick="enableGithubEdit()">Edit</button>
-      <button id="saveGithubBtn" onclick="saveGithubChanges()">Save</button>
-      <button id="cancelGithubBtn" onclick="cancelGithubEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--...........................LinkedIn...............................................-->
-    <div class="container">
-      <label for="linkedin">LinkedIn</label>
-      <input type="text" id="editableLinkedIn" placeholder="Your LinkedIn Link" disabled>
-      <button class="editBtn" id="editLinkedInBtn" onclick="enableLinkedInEdit()">Edit</button>
-      <button id="saveLinkedInBtn" onclick="saveLinkedInChanges()">Save</button>
-      <button id="cancelLinkedInBtn" onclick="cancelLinkedInEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--................................Twitter...........................................-->
-    <div class="container">
-      <label for="twitter">Twitter</label>
-      <input type="text" id="editableTwitter" placeholder="Your Twitter Link" disabled>
-      <button class="editBtn" id="editTwitterBtn" onclick="enableTwitterEdit()">Edit</button>
-      <button id="saveTwitterBtn" onclick="saveTwitterChanges()">Save</button>
-      <button id="cancelTwitterBtn" onclick="cancelTwitterEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--...............................Expirences................................................-->
-    <h3>Expierences</h3>
-    <div class="container">
-      <label for="work">Work</label>
-      <input type="text" id="editableWork" placeholder="Your work or expireneces" disabled>
-      <button class="editBtn" id="editWorkBtn" onclick="enableWorkEdit()">Edit</button>
-      <button id="saveWorkBtn" onclick="saveWorkChanges()">Save</button>
-      <button id="cancelWorkBtn" onclick="cancelWorkEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--....................................Education........................................-->
-    <div class="container">
-      <label for="education">Education</label>
-      <input type="text" id="editableEducation" placeholder="Add your education" disabled>
-      <button class="editBtn" id="editEducationBtn" onclick="enableEducationEdit()">Edit</button>
-      <button id="saveEducationBtn" onclick="saveEducationChanges()">Save</button>
-      <button id="cancelEducationBtn" onclick="cancelEducationEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--.........................................Skills...........................................-->
-    <div class="container">
-      <label for="skills">Skills</label>
-      <input type="text" id="editableSkills" placeholder="Add your skills" disabled>
-      <button class="editBtn" id="editSkillsBtn" onclick="enableSkillsEdit()">Edit</button>
-      <button id="saveSkillsBtn" onclick="saveSkillsChanges()">Save</button>
-      <button id="cancelSkillsBtn" onclick="cancelSkillsEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <!--.....................................Acadmic Details.........................................-->
-    <h3>Academic Details</h3>
-    <div class="container">
-      <label for="course">Course</label>
-      <input type="text" id="editableCourse" placeholder="Academic Detail" disabled>
-      <button class="editBtn" id="editCourseBtn" onclick="enableCourseEdit()">Edit</button>
-      <button id="saveCourseBtn" onclick="saveCourseChanges()">Save</button>
-      <button id="cancelCourseBtn" onclick="cancelCourseEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <div class="container">
-      <label for="1stSemCGPA">Overall CGPA</label>
-      <input type="text" id="editableCGPA" placeholder="Your CGPA" disabled>
-      <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
-      <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
-      <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
-    </div>
-    <div class="horizontal">
-      <hr>
-    </div>
-    <div class="container">
-      <label for="arrearSelection">Arrear/Backlog</label>
-      <select id="arrearSelection" onchange="toggleArrearTextbox()">
-          <option value="no">No</option>
-          <option value="yes">Yes</option>
-      </select>
-  
-      <div id="arrearDetails" style="display: none;">
-          <label for="arrearSubjects">Subjects with Arrear:</label>
-          <input type="text" id="arrearSubjects" placeholder="Enter subjects with arrear">
+    <form action="/student/StudentDetail" method="post">
+      <h3>Basic Information</h3>
+      <div class="container">
+        <label for="name">Name</label>
+        <input type="text" disabled id="name" placeholder="Your Name">
       </div>
-  
-      <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
-      <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
-      <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
-      <!--<label for="1stSemCGPA">Arrear/Backlog</label>
-      <input type="text" id="editableCGPA" placeholder="Your CGPA" disabled>
-      <button class="editBtn" id="editCGPABtn" onclick="enableCGPAEdit()">Edit</button>
-      <button id="saveCGPABtn" onclick="saveCGPAChanges()">Save</button>
-      <button id="cancelCGPABtn" onclick="cancelCGPAEdit()">Cancel</button>
-    </div>-->
+      <div class="horizontal">
+        <br>
+        <hr>
+        <br>
+      </div>
+
+      <div class="container">
+        <label for="roll">Registration no.</label>
+        <input type="text" id="roll" placeholder="Your Registration Number" disabled>
+      </div>
+      <div class="horizontal">
+        <br>
+        <hr>
+        <br>
+      </div>
+
+      <div class="container">
+        <label for="gender">Gender</label>
+        <select id="gender" disabled>
+          <option value="select">Select...</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Other</option>
+        </select>
+      </div>
+      <div class="horizontal">
+        <br>
+        <hr>
+        <br>
+      </div>
+
+      <!--..............................Birthday...................................-->
+      <div class="container">
+        <label for="birthday">Birthday</label>
+        <input type="text" id="birthday" disabled>
+      </div>
+      <div class="horizontal">
+        <br>
+        <hr>
+        <br>
+      </div>
+      <!--..................................Summary...........................................-->
+      <div class="container">
+        <label for="summary">Summary</label>
+        <textarea id="summary" placeholder="Tell us about yourself (interests, experience, etc.)" disabled></textarea>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--..........................website...........................................-->
+      <div class="container">
+        <label for="website">Website</label>
+        <!-- <textarea name="website" id="editableWebsite" disabled></textarea> -->
+        <input type="text" id="website" placeholder="Any blogpost Link" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--............................Github..............................................-->
+      <div class="container">
+        <label for="github">Github</label>
+        <input type="text" id="github" placeholder="Your Github Link" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--...........................LinkedIn...............................................-->
+      <div class="container">
+        <label for="linkedin">LinkedIn</label>
+        <input type="text" id="linkedin" placeholder="Your LinkedIn Link" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+    
+      <!--...............................Expirences................................................-->
+      <h3>Expierences</h3>
+      <div class="container">
+        <label for="work">Work</label>
+        <input type="text" id="work" placeholder="Your work or expireneces" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--....................................Education........................................-->
+      <div class="container">
+        <label for="education">Education</label>
+        <input type="text" id="education" placeholder="Add your education" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--.........................................Skills...........................................-->
+      <div class="container">
+        <label for="skills">Skills</label>
+        <input type="text" id="skills" placeholder="Add your skills" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <!--.....................................Acadmic Details.........................................-->
+      <h3>Academic Details</h3>
+      <div class="container">
+        <label for="course">Course</label>
+        <input type="text" id="course" placeholder="Academic Detail" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
+      <div class="container">
+        <label for="cgpa">Overall CGPA</label>
+        <input type="text" id="cgpa" placeholder="Your CGPA" disabled>
+      </div>
+      <div class="horizontal">
+        <hr>
+      </div>
   </div>
-</div>
+
+  <!-- ... (your existing HTML code) ... -->
+
+  
+  <!-- ... (the rest of your HTML code) ... -->
+  
 </form>
-<div class="parentContainer">
-  <script src="/javascripts/StudentProfile.js"></script>
-  <script src="/javascripts/location.js"></script>
-
+<div class="buttons">
+  <button class="editBtn" id="editBtn" onclick="enableEdit()">Edit</button>
+  <button id="saveBtn" onclick="saveChanges()" style="display: none;">Save</button>
+  <button id="cancelBtn" onclick="cancelEdit()" style="display: none;">Cancel</button>
+</div>
+    <script src="/javascripts/StudentProfile.js"></script>
+    <!-- <script src="/javascripts/location.js"></script> -->
 </body>
-
 </html>

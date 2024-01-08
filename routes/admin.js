@@ -85,8 +85,6 @@ router.get('/AdminRegister', (req, res) => {
     }
   });
   router.get('/StudentDetails', async (req, res) => {
-  
-  
     try {
     
       const users = await students.find();
