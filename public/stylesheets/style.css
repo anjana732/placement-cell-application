@@ -118,6 +118,7 @@ footer p {
 .about-us{
   background-color: rgb(251, 242, 252);
   height: 80%;
+  margin-top: -30px;
 }
 .about-us h2{
   font-size: 40px;

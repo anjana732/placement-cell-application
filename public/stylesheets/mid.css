@@ -1,23 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #ade7bf, #f3e5a6);
+    background-size: cover;
+}
+
 .container {
     text-align: center;
-    margin: 0 auto;
-    width: 50%;
+    width: 70%; /* Increased container width */
 }
 
 .dropdown {
-    display: inline-block;
-    position: relative;
+    width: 60%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the dropdown */
+    background-color: #f3e5a6;
 }
 
 select {
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
 #submit-button {
-    padding: 5px 10px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     cursor: pointer;
+    background-color: #007bff;
+    width: 50%;
+    color: #fff;
+    margin-top: 20px; /* Added margin to separate button from dropdown */
+}
+.btn{
+    width: 100%;
 }
