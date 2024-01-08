@@ -205,7 +205,7 @@ address{
 }
 .students{
   background-color: #f5eded;
-  height: 60vh;
+  height: 80vh;
 }
 .students h2{
   font-size: 40px;
@@ -254,18 +254,19 @@ address{
 .testimonial-container {
   display: flex;
   justify-content: space-around;
-  width: 100%;
-  background-color: #fff;
+  width: 97%;
+ /* background-color: #fff;*/
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   height: 100%;
+  margin-bottom: 20px;
 }
 
 .testimonial {
-  flex: 1;
-  margin: 0 10px;
+ /* flex: 1;*/
+  margin: 10px 10px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
   max-width:30%;
