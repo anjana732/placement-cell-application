@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/companyDashboard.css">
-  <title>User Data</title>
+<!-- <link rel="stylesheet" href="/stylesheets/companyDashboard.css"> -->
+<link rel="stylesheet" href="/stylesheets/Dashboard.css"> 
+  <title>Student Details</title>
 </head>
 
 <body>
@@ -20,23 +21,6 @@
         <li class="popup-trigger"><a href="#"><i class="fa-solid fa-share-from-square"></i>Post</a></li>
         <li><a href="StudentDetails"><i class="fa-solid fa-users"></i></i>Students Detail</a></li>
       </ul>
-      <div class="popup" id="popupForm">
-        <div class="popup-content">
-          <span class="close" id="closePopup"><i class="fa-solid fa-circle-xmark"></i></span>
-          <!--&times;-->
-          <form action="/admin/AdminDashBoard" method="post">
-            <input type="text" id="company-name" name="companyName" required placeholder="Comapany Name">
-            <input type="text" id="location" name="location" required placeholder="Location">
-            <input type="text" id="job-role" name="jobRole" required placeholder="Job Role">
-            <input type="text" id="salary" name="salary" required placeholder="Salary">
-            <input type="text" id="eligiblity" name="eligibility" required placeholder="Eligiblity">
-            <input type="text" id="job-description" name="jobDesc" required placeholder="Job Description">
-            <input type="text" id="apply-link" name="applyLink" required placeholder="Apply Link">
-            <input type="date" id="date" name="lastDate" required>
-            <button type="submit">Post Job</button>
-          </form>
-        </div>
-      </div>
     </nav>
   </div>
   <div class="navbar">
@@ -53,7 +37,7 @@
       </div>
     </div>
   </div>
-  <h1>User Data</h1>
+  <h1>Student Detail</h1>
   <ul>
     <% users.forEach(user => { %>
       <li>

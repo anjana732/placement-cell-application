@@ -57,7 +57,7 @@
       </div>
     </div>
   </div>
-  <!--Main Content-->
+ 
     <div class="main-content">
       <h1>Recent Job Posts</h1>
   <ul class="dataUL">
@@ -67,9 +67,8 @@
         <p>Location: <%= job.location %></p>
         <p>Job Role: <%= job.jobRole %></p>
         <p>Salary: <%= job.salary %></p>
-        
         <p>Description: <%= job.jobDesc %></p>
-        <p>Apply Link: <a href="<%= job.applyLink %>"><%= job.applyLink %></a></p>
+        <p>Apply Link: <a href="<%= job.applyLink %>">Apply</a></p>
         <p>Last Date: <%= job.lastDate.toDateString() %></p>
       </li>
     <% }); %>
