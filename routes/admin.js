@@ -74,7 +74,7 @@ router.get('/AdminRegister', (req, res) => {
   router.get('/student-details', async (req, res) => {
   
     try {
-      // Fetch data from MongoDB
+      
       const jobs = await postJob.find();
   
       
